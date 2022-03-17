@@ -1,0 +1,95 @@
+1. Encuentra el orden correcto: 
+
+this.resetButton = createButton("");
+
+constructor() {}
+  
+this.resetTitle = createElement("h2");
+
+
+2. ¿Que palabras faltan?
+
+ handleElements() {
+  
+    this.resetTitle.html("Reiniciar juego");
+    _____.resetTitle.class("resetText");
+    this.________.position(width / 2 + 200, 40);
+
+    this.resetButton.______("resetButton");
+    this.resetButton.______(width / 2 + 230, 100);
+
+  }
+  
+  
+  3. ¿Puedes encontrar el error?
+  
+  constructor() {
+    this.leadeboardTitle = createElement(12);
+
+    this.leader1 = createElement(12);
+    this.leader2 = createElement(12);
+  }
+  
+  
+  4. BONUS
+   handleElements() {
+  
+    this.leadeboardTitle.html("Puntuación");
+    this.leadeboardTitle.class("resetText");
+    this.leadeboardTitle.position(width / 3 - 60, 40);
+
+    this.leader1.class("leadersText");
+    this.leader1.position(width / 3 - 50, 80);
+
+    this.leader2.class("leadersText");
+    this.leader2.position(width / 3 - 50, 130);
+  }
+  
+  
+  5. ¿Me ayudas explicando el código?
+  
+  showLeaderboard() {
+    var leader1, leader2;
+    var players = Object.values(allPlayers);
+    if (
+      (players[0].rank === 0 && players[1].rank === 0) ||
+      players[0].rank === 1
+    ) {
+      // &emsp;    esta etiqueta se utiliza para mostrar cuatro espacios.
+      leader1 =
+        players[0].rank +
+        "&emsp;" +
+        players[0].name +
+        "&emsp;" +
+        players[0].score;
+
+      leader2 =
+        players[1].rank +
+        "&emsp;" +
+        players[1].name +
+        "&emsp;" +
+        players[1].score;
+    }
+
+    if (players[1].rank === 1) {
+      leader1 =
+        players[1].rank +
+        "&emsp;" +
+        players[1].name +
+        "&emsp;" +
+        players[1].score;
+
+      leader2 =
+        players[0].rank +
+        "&emsp;" +
+        players[0].name +
+        "&emsp;" +
+        players[0].score;
+    }
+
+    this.leader1.html(leader1);
+    this.leader2.html(leader2);
+  }
+  
+  6. ¿Dónde colocamos la siguiente instrucción?
+   this.showLeaderboard();
