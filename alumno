@@ -1,0 +1,41 @@
+1.¿En que clase debe ir está funsión?¿Que valores le faltan?
+
+handleResetButton() {
+    this.resetButton.mousePressed(() => {
+      database.ref("/").set({
+        playerCount: ____,
+        gameState: _____,
+        players: {}
+      });
+      window.location.reload();
+    });
+  }
+  
+  2. ¿En dónde se coloca la siguiente instrucción y porque?
+  
+  play() {
+    
+    this.handleResetButton();
+  }
+  
+  3.  ¿Cúal el el orden correcto?
+  
+  
+  handlePlayerControls() {
+  
+ if (keyIsDown(LEFT_ARROW) && player.positionX > width / 3 - 50) {
+    
+    }
+   player.positionX -= 5;
+      player.update();
+      
+
+    if (keyIsDown(RIGHT_ARROW) && player.positionX < width / 2 + 300) {
+    
+    }
+ 
+   
+  handlePlayerControls() {}
+
+player.positionX += 5;
+      player.update()
